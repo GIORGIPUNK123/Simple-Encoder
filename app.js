@@ -5,7 +5,7 @@ const encryptInput = document.getElementById('encryptInput');
 const decryptInput = document.getElementById('decryptInput');
 
 encryptBtn.addEventListener('click', () => {
-  fetch('/encrypt:3000', {
+  fetch('http://localhost:3000/encrypt', {
     method: 'POST',
     body: encryptInput.value,
   })
@@ -17,7 +17,7 @@ encryptBtn.addEventListener('click', () => {
 });
 
 decryptBtn.addEventListener('click', () => {
-  fetch('/decrypt:3001', {
+  fetch('http://localhost:3001/decrypt', {
     method: 'POST',
     body: decryptInput.value,
   })
