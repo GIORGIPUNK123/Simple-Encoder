@@ -227,4 +227,3 @@ app.post('/decrypt', (req, res) => {
     decoded = '';
   });
 });
-app.listen(port);
