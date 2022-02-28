@@ -217,7 +217,7 @@ app.post('/encrypt', (req, res) => {
     encoded = '';
   });
 });
-app.listen(port);
+app.listen(process.env.PORT)
 
 app.post('/decrypt', (req, res) => {
   req.on('data', (data) => {
