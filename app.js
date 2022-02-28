@@ -5,7 +5,7 @@ const encryptInput = document.getElementById('encryptInput');
 const decryptInput = document.getElementById('decryptInput');
 
 encryptBtn.addEventListener('click', () => {
-  fetch('http://localhost:3000/encrypt', {
+  fetch('https://simple-encoder.herokuapp.com/encrypt', {
     method: 'POST',
     body: encryptInput.value,
   })
@@ -17,7 +17,7 @@ encryptBtn.addEventListener('click', () => {
 });
 
 decryptBtn.addEventListener('click', () => {
-  fetch('http://localhost:3001/decrypt', {
+  fetch('https://simple-encoder.herokuapp.com/decrypt', {
     method: 'POST',
     body: decryptInput.value,
   })
