@@ -227,3 +227,4 @@ app.post('/decrypt', (req, res) => {
     decoded = '';
   });
 });
+app.get('/', (req,res) => { res.send("WORKS") })
