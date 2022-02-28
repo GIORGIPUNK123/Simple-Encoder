@@ -1,5 +1,6 @@
 const app = require('express')();
 const cors = require('cors');
+const port = 3000;
 app.use(cors());
 
 //  *_* = a,
@@ -216,7 +217,7 @@ app.post('/encrypt', (req, res) => {
     encoded = '';
   });
 });
-app.listen(3000);
+app.listen(port);
 
 app.post('/decrypt', (req, res) => {
   req.on('data', (data) => {
@@ -226,4 +227,4 @@ app.post('/decrypt', (req, res) => {
     decoded = '';
   });
 });
-app.listen(3001);
+app.listen(port);
