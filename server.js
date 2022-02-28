@@ -83,7 +83,7 @@ function encoding(needsToEncode) {
       encoded += '<>-';
     }
     if (needsToEncode[i] == 'p') {
-      encoded += ')__';
+      encoded += '*()';
     }
     if (needsToEncode[i] == 'q') {
       encoded += '.><';
