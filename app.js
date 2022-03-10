@@ -4,6 +4,13 @@ const decryptBtn = document.getElementById('decryptBtn');
 const encryptInput = document.getElementById('encryptInput');
 const decryptInput = document.getElementById('decryptInput');
 
+const copyBtn = document.getElementById('copyBtn');
+
+copyBtn.addEventListener('click', () => {
+  decryptInput.select();
+  document.execCommand('copy');
+});
+
 encryptBtn.addEventListener('click', () => {
   fetch('https://simple-encoder.herokuapp.com/encrypt', {
     method: 'POST',
