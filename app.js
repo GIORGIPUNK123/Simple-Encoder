@@ -7,6 +7,7 @@ const decryptInput = document.getElementById('decryptInput');
 const copyBtn = document.getElementById('copyBtn');
 
 copyBtn.addEventListener('click', () => {
+  decryptInput.focus();
   decryptInput.select();
   document.execCommand('copy');
 });
