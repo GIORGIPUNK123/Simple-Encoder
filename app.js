@@ -1,37 +1,37 @@
-const encryptBtn = document.getElementById('encryptBtn');
-const decryptBtn = document.getElementById('decryptBtn');
+const encryptBtn = document.getElementById("encryptBtn");
+const decryptBtn = document.getElementById("decryptBtn");
 
-const encryptInput = document.getElementById('encryptInput');
-const decryptInput = document.getElementById('decryptInput');
+const encryptInput = document.getElementById("encryptInput");
+const decryptInput = document.getElementById("decryptInput");
 
-const copyBtn = document.getElementById('copyBtn');
+const copyBtn = document.getElementById("copyBtn");
 
-copyBtn.addEventListener('click', () => {
+copyBtn.addEventListener("click", () => {
   decryptInput.focus();
   decryptInput.select();
-  document.execCommand('copy');
+  document.execCommand("copy");
 });
 
-encryptBtn.addEventListener('click', () => {
-  fetch('https://simple-encoder.herokuapp.com/encrypt', {
-    method: 'POST',
+encryptBtn.addEventListener("click", () => {
+  fetch("https://simple-encoder-back.onrender.com/encrypt", {
+    method: "POST",
     body: encryptInput.value,
   })
     .then((resp) => resp.text())
     .then((data) => {
       decryptInput.value = data;
     });
-  encryptInput.value = '';
+  encryptInput.value = "";
 });
 
-decryptBtn.addEventListener('click', () => {
-  fetch('https://simple-encoder.herokuapp.com/decrypt', {
-    method: 'POST',
+decryptBtn.addEventListener("click", () => {
+  fetch("https://simple-encoder-back.onrender.com/decrypt", {
+    method: "POST",
     body: decryptInput.value,
   })
     .then((resp) => resp.text())
     .then((data) => {
       encryptInput.value = data;
     });
-  decryptInput.value = '';
+  decryptInput.value = "";
 });
